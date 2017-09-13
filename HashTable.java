@@ -52,7 +52,7 @@ public class HashTable{
 
 	public static void main(String[] args){
 		HashTable table = new HashTable();
-		int arr[] = {3,3,3,3};
+		int arr[] = {3,3,3,3,1,2,3,4,5,5,4,4,3,2};
 		for(int i = 0;i<arr.length;i++){
 			if(table.contains(arr[i])){
 				int temp = table.get(arr[i]) + 1;
@@ -61,6 +61,7 @@ public class HashTable{
 				table.put(arr[i],1);
 			}
 		}
+		System.out.println(table.get(3));
 		System.out.println(table.getKeys());
 		System.out.println(table.getValues());
 

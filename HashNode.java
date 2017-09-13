@@ -26,7 +26,7 @@ public class HashNode{
 
 	public int insert(int key,int value){
 		int index = -1;
-		if(!isPresent(key,value)){
+		if((index = isKeypresent(key))==-1){
 			KeyValue temp = new KeyValue();
 			temp.setKey(key);
 			temp.setValue(value);
@@ -50,6 +50,7 @@ public class HashNode{
 		int index = isKeypresent(key);
 		if(index!=-1){
 			KeyValue temp = hashList.get(index);
+			System.out.println("Returning "+temp.getValue());
 			return temp.getValue();
 		}
 		return -1;
