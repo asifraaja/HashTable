@@ -1,23 +1,24 @@
-public class KeyValue{
-	private int key;
-	private int value;
+public class KeyValue<K,V>{
+	private K key;
+	private V value;
 
-	public KeyValue(){
-		key = 0;
-		value = 0;
+	@SuppressWarnings("hiding")
+	public <K,V> KeyValue(){
+		key = null;
+		value = null;
 	}
 
-	public void setKey(int key){
+	public void setKey(K key){
 		this.key = key;
 	}
-	public void setValue(int value){
+	public void setValue(V value){
 		this.value = value;
 	}
 
-	public int getKey(){
+	public K getKey(){
 		return this.key;
 	}
-	public int getValue(){
+	public V getValue(){
 		return this.value;
 	}
 }
