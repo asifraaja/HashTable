@@ -11,9 +11,9 @@ public class Main{
 				table.put(arr[i],1);
 			}
 		}
+		System.out.println(table.getValues());
 		System.out.println(table.get("raaja"));
 		System.out.println(table.getKeys());
-		System.out.println(table.getValues());
 
 	}
 }
